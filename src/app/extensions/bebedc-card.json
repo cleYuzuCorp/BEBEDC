@@ -1,0 +1,12 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Qualification d'affaire",
+    "uid": "bebedc",
+    "location": "crm.record.tab",
+    "module": {
+      "file": "bebedc.tsx"
+    },
+    "objectTypes": [{ "name": "deals" }]
+  }
+}

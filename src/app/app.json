@@ -1,0 +1,16 @@
+{
+  "name": "Yuzu Corp",
+  "description": "C'est une carte de modification et génération du score de la méthode BEBEDC",
+  "uid": "bebedc",
+  "scopes": ["crm.objects.deals.read", "crm.objects.deals.write"],
+  "public": false,
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "extensions/bebedc-card.json"
+        }
+      ]
+    }
+  }
+}
