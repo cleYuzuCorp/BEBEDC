@@ -106,6 +106,14 @@ const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: 
       const newCompetitorsScore = competitors === "Fort" ? 10 : competitors === "Moyen" ? 5 : 0
 
       setScore(newNeedScore + newIssueScore + newBudgetScore + newDeadlineScore + newDecisionMakersScore + newCompetitorsScore)
+
+      runServerless({
+        name: 'updateScore',
+        parameters: {
+          score: score,
+          dealId: dealId,
+        },
+      })
     }
 
     calculateScores()
