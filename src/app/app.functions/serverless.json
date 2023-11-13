@@ -5,6 +5,10 @@
     "updateProps": {
       "file": "updateProps.js",
       "secrets": []
+    },
+    "updateScore": {
+      "file": "updateScore.js",
+      "secrets": []
     }
   }
 }
