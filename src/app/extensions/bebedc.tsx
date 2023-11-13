@@ -55,9 +55,9 @@ const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: 
   }
 
   const options = [
-    { label: '🟢 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0', value: 'Faible' },
+    { label: '🔴 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0', value: 'Faible' },
     { label: '🟠 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0', value: 'Moyen' },
-    { label: '🔴 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0', value: 'Fort' },
+    { label: '🟢 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0', value: 'Fort' },
   ]
 
   useEffect(() => {
