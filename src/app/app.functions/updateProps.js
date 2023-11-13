@@ -2,7 +2,7 @@ const axios = require('axios')
 
 exports.main = (context = {}, sendResponse) => {
   const { value, objectId, dealId } = context.parameters
-  const token = "pat-na1-7716b040-993a-485c-9cd8-67b8aacb1b28"
+  const token = "pat-na1-7f355bc7-e8cb-4e2b-84b0-efb2eb3bdf64"
   return updateProps(token, dealId, objectId, value)
     .then(() => {
       sendResponse({ status: 'success' })
