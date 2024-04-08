@@ -1,14 +1,22 @@
 {
-  "runtime": "nodejs16.x",
-  "version": "2.0",
   "appFunctions": {
     "updateProps": {
       "file": "updateProps.js",
-      "secrets": []
+      "endpoint": {
+        "path": "updateProps.js",
+        "method": [
+          "GET"
+        ]
+      }
     },
     "updateScore": {
       "file": "updateScore.js",
-      "secrets": []
+      "endpoint": {
+        "path": "updateScore.js",
+        "method": [
+          "GET"
+        ]
+      }
     }
   }
 }
