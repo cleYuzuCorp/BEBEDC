@@ -3,21 +3,21 @@
     "getSecrets": {
       "file": "getSecrets.js",
       "secrets": [
-        "OBJECT_ID"
+        "OBJECTS_ID_BEBEDC"
       ]
     },
     "updateProps": {
       "file": "updateProps.js",
       "secrets": [
-        "HUBSPOT_API_KEY",
-        "BASE_URL"
+        "HUBSPOT_API_KEY_BEBEDC",
+        "BASE_URL_HUBAPI"
       ]
     },
     "updateScore": {
       "file": "updateScore.js",
       "secrets": [
-        "HUBSPOT_API_KEY",
-        "BASE_URL"
+        "HUBSPOT_API_KEY_BEBEDC",
+        "BASE_URL_HUBAPI"
       ]
     }
   }

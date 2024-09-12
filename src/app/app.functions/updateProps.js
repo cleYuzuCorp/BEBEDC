@@ -3,7 +3,7 @@ const axios = require('axios')
 exports.main = async (context = {}) => {
   const { value, objectId, dealId } = context.parameters
 
-  const baseUrl = process.env.BASE_URL
+  const baseUrl = process.env.BASE_URL_HUBAPI
 
   try {
     const response = await axios.patch(
@@ -16,7 +16,7 @@ exports.main = async (context = {}) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`
+          Authorization: `Bearer ${process.env.HUBSPOT_API_KEY_BEBEDC}`
         }
       }
     )
