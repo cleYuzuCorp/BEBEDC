@@ -20,10 +20,8 @@ exports.main = async (context = {}) => {
         }
       }
     )
-    console.log(response.data, 'res')
     return (response.data)
   } catch (e) {
-    console.log(e, 'error')
     if (e.response) {
       return {
         status: 'ERROR',
