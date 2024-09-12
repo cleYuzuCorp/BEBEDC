@@ -1,22 +1,24 @@
 {
   "appFunctions": {
+    "getSecrets": {
+      "file": "getSecrets.js",
+      "secrets": [
+        "OBJECT_ID"
+      ]
+    },
     "updateProps": {
       "file": "updateProps.js",
-      "endpoint": {
-        "path": "updateProps.js",
-        "method": [
-          "GET"
-        ]
-      }
+      "secrets": [
+        "HUBSPOT_API_KEY",
+        "BASE_URL"
+      ]
     },
     "updateScore": {
       "file": "updateScore.js",
-      "endpoint": {
-        "path": "updateScore.js",
-        "method": [
-          "GET"
-        ]
-      }
+      "secrets": [
+        "HUBSPOT_API_KEY",
+        "BASE_URL"
+      ]
     }
   }
 }

@@ -4,7 +4,13 @@
   "uid": "bebedc",
   "scopes": [
     "crm.objects.deals.read",
-    "crm.objects.deals.write"
+    "crm.objects.deals.write",
+    "crm.schemas.custom.write",
+    "crm.objects.custom.read",
+    "collector.graphql_query.execute",
+    "collector.graphql_schema.read",
+    "hubdb",
+    "oauth"
   ],
   "public": false,
   "extensions": {

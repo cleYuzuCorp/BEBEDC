@@ -7,10 +7,5 @@
     "build": "npm run build --prefix ./src/app/extensions/"
   },
   "author": "HubSpot",
-  "license": "MIT",
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.16"
-  }
+  "license": "MIT"
 }

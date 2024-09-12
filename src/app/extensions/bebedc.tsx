@@ -18,7 +18,8 @@ hubspot.extend<'crm.record.tab'>(({ context, runServerlessFunction, actions }) =
   />
 ))
 
-const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: {context : any, runServerless: any, addAlert: any, fetchCrmObjectProperties: any}) => {
+const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }:
+  { context: any, runServerless: any, addAlert: any, fetchCrmObjectProperties: any }) => {
 
   const [dealId, setDealId] = useState()
   const [score, setScore] = useState(0)
@@ -39,20 +40,20 @@ const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: 
 
   const [error, setError] = useState('')
 
-  const objectId = {
-    need: 'besoin',
-    issue: 'enjeu',
-    budget: 'budget',
-    deadline: 'echeance',
-    decisonMakers: 'decideurs',
-    competitors: 'competiteurs',
-    needComment: 'commentaire___besoin',
-    issueComment: 'commentaire___enjeu',
-    budgetComment: 'commentaire___budget',
-    deadlineComment: 'commentaire___echeance',
-    decisionMakersComment: 'commentaire___decideurs',
-    competitorsComment: 'commentaire___competiteurs',
-  }
+  const [objectId, setObjectId] = useState({
+    need: '',
+    issue: '',
+    budget: '',
+    deadline: '',
+    decisonMakers: '',
+    competitors: '',
+    needComment: '',
+    issueComment: '',
+    budgetComment: '',
+    deadlineComment: '',
+    decisionMakersComment: '',
+    competitorsComment: ''
+  })
 
   const options = [
     { label: '🔴 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0', value: 'Faible' },
@@ -95,6 +96,20 @@ const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: 
       }
     )
   }, [fetchCrmObjectProperties])
+
+  useEffect(() => {
+    runServerless({
+      name: 'getSecrets'
+    }).then((resp: { status: any; response: any; message: any }) => {
+      if (resp.status === 'SUCCESS') {
+        const response = resp.response
+
+        setObjectId(response.objectId)
+      } else {
+        console.error(resp.message || 'An error occurred')
+      }
+    })
+  }, [])
 
   useEffect(() => {
     const calculateScores = () => {
@@ -168,7 +183,7 @@ const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: 
           <ProgressBar variant={score >= 82 ? "success" : "warning"} value={score} showPercentage={true} />
         </Flex>
 
-        <Flex direction="column" gap="md">
+        {objectId && <Flex direction="column" gap="md">
           <Flex gap="xl">
             <Select
               name="need"
@@ -288,7 +303,7 @@ const BEBEDC = ({ context, runServerless, addAlert, fetchCrmObjectProperties }: 
               />
             </Flex>
           </Flex>
-        </Flex>
+        </Flex>}
       </Flex>
     </>
   )
